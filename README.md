@@ -1,4 +1,4 @@
 baseproject
 ===========
 
-Base project's environment
+Base environment for new projects.
