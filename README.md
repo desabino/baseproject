@@ -1,4 +1,4 @@
-baseproject
+Base Project
 ===========
 
 Ambiente básico para novos projetos.
@@ -11,3 +11,9 @@ Ambiente básico para novos projetos.
 - MySQL
 - Zend Framework 1.12
 - Separação de aplicação e conteúdo estático.
+
+Requerimentos
+=============
+
+- Vagrant 1.6
+- VirtualBox
