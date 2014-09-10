@@ -9,7 +9,7 @@ Ambiente básico para novos projetos.
 - Apache
 - PHP
 - MySQL
-- Zend Framework 1.12
+- preparado para Zend Framework 1.12
 - Separação de aplicação e conteúdo estático.
 
 Requerimentos
@@ -17,3 +17,4 @@ Requerimentos
 
 - Vagrant 1.6
 - VirtualBox
+- Library Zend Framework 1.12
