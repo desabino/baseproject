@@ -51,6 +51,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
     }
 	
     // Routes
+    /*
     protected function _initRoutes()
     {
         // get router
@@ -60,6 +61,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         $config = new Zend_Config_Ini(APPLICATION_PATH . '/configs/routes.ini', 'production');
         $router->addConfig($config, 'routes');
     }
+    */
 	
     // Navigation
     /*
@@ -82,7 +84,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         $view = $this->getResource('view');
         $view->doctype('HTML5');
 		
-        $view->headTitle('Pendura APP')
+        $view->headTitle('Baseproject')
              ->setSeparator(' :: ');
 		
         // Definindo css default
@@ -92,10 +94,9 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 		
         // Definindo js default
         $view->headScript()->appendFile('/js/jquery/jquery.js');
-        $view->headScript()->appendFile('/js/jquery/mask.min.js');
-        $view->headScript()->appendFile('/js/jquery/livefilter.min.js');
         $view->headScript()->appendFile('/js/util/bootstrap.min.js');
-        $view->headScript()->appendFile('/js/site/fiado.js');
+        $view->headScript()->appendFile('/js/jquery/mask.min.js');
+        $view->headScript()->appendFile('/js/site/init.js');
     }
 
     // Locale

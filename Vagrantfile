@@ -28,8 +28,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network :forwarded_port, guest: 3306, host: 3306
   
   # Hostname
-  config.vm.host_name = "fiado"
-  config.vm.hostname  = "fiado"
+  config.vm.host_name = "baseproject"
+  config.vm.hostname  = "baseproject"
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
