@@ -4,7 +4,7 @@ class packages {
     #    ensure => 'installed'
     #}
     
-    package { ['php']:
-        ensure => 'installed'
-    }
+    #package { ['php']:
+    #    ensure => 'installed'
+    #}
 }

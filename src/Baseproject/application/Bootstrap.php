@@ -27,7 +27,9 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         $config = new Zend_Config_Ini(APPLICATION_PATH . '/configs/acl.ini');
         Zend_Registry::set('acl', $config);
     }
-	
+    
+    // ACL
+    /*
     protected function _initAclControllerPlugin()
     {
         $this->bootstrap('frontcontroller');
@@ -39,6 +41,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 	
         $front->registerPlugin($aclPlugin);
     }
+    */
 	
     // Autoloader (Namespace)
     protected function _initAutoload()
@@ -88,15 +91,17 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
              ->setSeparator(' :: ');
 		
         // Definindo css default
-        $view->headLink()->appendStylesheet('/css/util/bootstrap.min.css');
-        $view->headLink()->appendStylesheet('/css/util/bootstrap-theme.min.css');
-        $view->headLink()->appendStylesheet('/css/site/styles.css');
+        $view->css = array('/css/util/bootstrap.min.css',
+        				   '/css/util/bootstrap-theme.min.css',
+        				   '/css/site/styles.css'
+        				  );
 		
         // Definindo js default
-        $view->headScript()->appendFile('/js/jquery/jquery.js');
-        $view->headScript()->appendFile('/js/util/bootstrap.min.js');
-        $view->headScript()->appendFile('/js/jquery/mask.min.js');
-        $view->headScript()->appendFile('/js/site/init.js');
+        $view->js = array ('/js/jquery/jquery.js',
+        				   '/js/util/bootstrap.min.js',
+        				   '/js/jquery/mask.min.js',
+        				   '/js/site/init.js'
+        				  );
     }
 
     // Locale
@@ -107,6 +112,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         $registry->set('Zend_Locale', $locale);
     }
     
+    // Email Transport
     /*
     protected function _initDefaultEmailTransport()
     {
